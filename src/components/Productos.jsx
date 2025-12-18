@@ -2,13 +2,31 @@ import { useState } from "react";
 import "../styles/Productos.css";
 import ModalProducto from "./ModalProducto";
 
+/* ===== IMÁGENES DE PROYECTOS ===== */
+import cafeteria from "../assets/cafeteria.png";
+import catalogo from "../assets/CATALOGO.png";
+import papillon from "../assets/papillon.png";
+import heggerhaus from "../assets/heggerhaus.png";
+import school from "../assets/school.png";
+import verdureria from "../assets/verdureria.png";
+
+/* ===== ICONOS DE TECNOLOGÍAS ===== */
+import reactIcon from "../assets/react.svg";
+import htmlIcon from "../assets/html.svg";
+import cssIcon from "../assets/css.svg";
+import jsIcon from "../assets/js.svg";
+import penpotIcon from "../assets/penpot.svg";
+import infiniteIcon from "../assets/infinite-painter.svg";
+import responsiveIcon from "../assets/responsive-devices.svg";
+import phpIcon from "../assets/php.svg";
+
 const productos = [
     {
         id: 1,
         nombre: "Página principal de una cafetería",
-        descripcion: "La pagina oficial de una cafetería muy reconocida en Cochabamba",
-        tecnologias: ["react.svg", "html.svg", "css.svg", "js.svg", "penpot.svg"],
-        imagen: "cafeteria.png",
+        descripcion: "La página oficial de una cafetería muy reconocida en Cochabamba",
+        tecnologias: [reactIcon, htmlIcon, cssIcon, jsIcon, penpotIcon],
+        imagen: cafeteria,
         fecha: "2024",
         cliente: "Cafimochi central",
         estado: "Finalizado",
@@ -17,57 +35,57 @@ const productos = [
     {
         id: 2,
         nombre: "Landing Page de Catálogo de una repostería",
-        descripcion: "Diseño UX/UI de una pagina de reserva y venta de postres de repostería",
-        tecnologias: ["penpot.svg", "html.svg", "css.svg", "infinite-painter.svg"],
-        imagen: "CATALOGO.png",
+        descripcion: "Diseño UX/UI de una página de reserva y venta de postres",
+        tecnologias: [penpotIcon, htmlIcon, cssIcon, infiniteIcon],
+        imagen: catalogo,
         fecha: "2024",
         cliente: "Miskilinda",
         estado: "Subido",
-        link: "https://design.penpot.app/#/view?file-id=739c4333-f903-8088-8007-163355878c85&page-id=739c4333-f903-8088-8007-163355878c86&section=interactions&index=0&share-id=87795101-e4ce-8012-8007-46cac72c7fca"
+        link: "https://design.penpot.app/"
     },
     {
         id: 3,
-        nombre: "Landin Page de un restaurante tradicional",
-        descripcion: "Diseño de una pagina web principal donde se muestra el menú principal",
-        tecnologias: ["penpot.svg", "html.svg", "css.svg", "infinite-painter.svg"],
-        imagen: "papillon.png",
+        nombre: "Landing Page de un restaurante tradicional",
+        descripcion: "Diseño de una página web principal donde se muestra el menú",
+        tecnologias: [penpotIcon, htmlIcon, cssIcon, infiniteIcon],
+        imagen: papillon,
         fecha: "2024",
         cliente: "Papillon Shop",
-        estado: "finalizado",
+        estado: "Finalizado",
         link: "https://papillon_shop.com"
     },
     {
         id: 4,
-        nombre: "Desarrollo de una Landig page de una empresa",
-        descripcion: "Desarrollo completo de una pagina con catalogo de una empresa.",
-        tecnologias: ["html.svg", "css.svg", "js.svg", "php.svg", "responsive-devices.svg"],
-        imagen: "heggerhaus.png",
+        nombre: "Landing Page empresarial",
+        descripcion: "Desarrollo completo de una página con catálogo empresarial",
+        tecnologias: [htmlIcon, cssIcon, jsIcon, phpIcon, responsiveIcon],
+        imagen: heggerhaus,
         fecha: "2024",
         cliente: "Heggerhaus",
         estado: "Desplegado",
-        link: "https://heggerhaus.xo.je/?i=1"
+        link: "https://heggerhaus.xo.je/"
     },
     {
         id: 5,
-        nombre: "Diseño de un sistema escolar virtual responsive",
+        nombre: "Sistema escolar virtual responsive",
         descripcion: "Diseño UX/UI del prototipo de un colegio virtual",
-        tecnologias: ["penpot.svg", "infinite-painter.svg", "responsive-devices.svg"],
-        imagen: "school.png",
+        tecnologias: [penpotIcon, infiniteIcon, responsiveIcon],
+        imagen: school,
         fecha: "2024",
         cliente: "UMSS",
         estado: "Diseñado",
-        link: "https://design.penpot.app/#/view?file-id=fffce8d7-4b40-8153-8007-38f84fdd3e19&page-id=fffce8d7-4b40-8153-8007-38f84fdd3e1a&section=interactions&index=0&zoom=fit&share-id=6f5ef70f-2f09-81ea-8007-46cb2ddfd9e7"
+        link: "#"
     },
     {
         id: 6,
-        nombre: "Diseño de una LandingPage responsive",
+        nombre: "Landing Page de verdulería",
         descripcion: "Diseño UX/UI del prototipo de una tienda de verduras",
-        tecnologias: ["penpot.svg", "infinite-painter.svg", "responsive-devices.svg"],
-        imagen: "verdureria.png",
+        tecnologias: [penpotIcon, infiniteIcon, responsiveIcon],
+        imagen: verdureria,
         fecha: "2024",
         cliente: "UMSS",
         estado: "Diseñado",
-        link: "https://design.penpot.app/#/view?file-id=bd830f34-5ac9-8161-8006-ceec70f158de&page-id=bd830f34-5ac9-8161-8006-ceec70f158df&section=interactions&index=0&share-id=6f5ef70f-2f09-81ea-8007-46ccb685318a"
+        link: "#"
     }
 ];
 
@@ -93,19 +111,15 @@ export default function Productos() {
 
                     <div className="grid-productos">
                         {productos.map((producto) => (
-                            <article
-                                key={producto.id}
-                                className="tarjeta-producto"
-                            >
-                                {/* IMAGEN */}
+                            <article key={producto.id} className="tarjeta-producto">
+                                
                                 <div className="imagen-producto">
                                     <img
-                                        src={`/src/assets/${producto.imagen}`}
+                                        src={producto.imagen}
                                         alt={producto.nombre}
                                     />
                                 </div>
 
-                                {/* CONTENIDO */}
                                 <div className="contenido-producto">
                                     <h3>{producto.nombre}</h3>
                                     <p>{producto.descripcion}</p>
@@ -114,8 +128,8 @@ export default function Productos() {
                                         {producto.tecnologias.map((tec, index) => (
                                             <img
                                                 key={index}
-                                                src={`/src/assets/${tec}`}
-                                                alt=""
+                                                src={tec}
+                                                alt="Tecnología"
                                                 className="icono-tecnologia"
                                             />
                                         ))}
@@ -128,6 +142,7 @@ export default function Productos() {
                                         Ver Detalles
                                     </button>
                                 </div>
+
                             </article>
                         ))}
                     </div>
