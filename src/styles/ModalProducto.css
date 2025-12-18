@@ -1,0 +1,132 @@
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 5, 19, 0.85);
+    backdrop-filter: blur(6px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
+
+h5 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.modal-contenido {
+    background: #0f172a;
+    width: 92%;
+    height: 70%;
+    max-width: 900px;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.modal-cerrar {
+    position: absolute;
+    top: 14px;
+    right: 16px;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 22px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* IMAGEN */
+.modal-imagen-contenedor {
+    height: 100%;
+}
+
+.modal-imagen-contenedor img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* INFO */
+.modal-info {
+    padding: 2rem;
+    color: #e6e6e6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-info h2 {
+    margin-bottom: 0.75rem;
+    color: #e0d6ff;
+}
+
+.modal-descripcion {
+    color: #b0b0c0;
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+}
+
+.modal-detalles {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1.5rem;
+}
+
+.modal-detalles li {
+    margin-bottom: 0.4rem;
+    font-size: 0.95rem;
+}
+
+.modal-detalles span {
+    color: #8fa4ff;
+    font-weight: 600;
+}
+
+/* TECNOLOGÍAS */
+.modal-tecnologias {
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+}
+
+.modal-tecnologias img {
+    width: 36px;
+    height: 36px;
+    padding: 4px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* BOTÓN */
+.modal-boton {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    background: linear-gradient(90deg, #141ea7, #1d5fac);
+    color: white;
+    border-radius: 10px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    margin-top: 1rem;
+}
+
+.modal-boton:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .modal-contenido {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-imagen-contenedor {
+        height: 220px;
+    }
+}

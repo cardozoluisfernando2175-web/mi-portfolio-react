@@ -1,0 +1,328 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: #0f172a;
+    color: white;
+}
+
+header {
+    background-color: rgb(0, 5, 19);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.164);
+}
+
+.Inicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+    padding: 2rem 2rem 0;
+    text-align: center;
+    background:#0f172a;
+    color: #f0f0f0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.inicio-contenido {
+    max-width: 900px;
+    width: 100%;
+    padding: 2rem;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .inicio-contenido {
+        padding: 1.5rem 1rem;
+    }
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+.Inicio .goad{
+    width: 550px;
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+}
+
+.Inicio h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    /* margin: 0 0 1.2rem; */
+    color: #e0d6ff;
+}
+
+.typing-text {
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 1.4;
+    margin: 0;
+    min-height: 2.2rem;
+    letter-spacing: -0.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+/* Cursor parpadeante */
+.cursor {
+    display: inline-block;
+    width: 1.5px;
+    height: 1em;
+    background-color: white; /* rosa brillante — ¡a tu estilo! */
+    margin-left: 0;
+    vertical-align: middle;
+    animation: blink 1s steps(2, start) infinite;
+}
+
+.arriba {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@keyframes blink {
+    to {
+        background-color: transparent;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .Inicio .goad{
+        /* margin-left: -0.7rem; */
+        width: 300px;
+    }
+    
+    .Inicio {
+        padding: 1.5rem;
+        min-height: 92vh;
+    }
+
+    .Inicio img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .Inicio h3 {
+        font-size: 1.6rem;
+    }
+
+    .typing-text {
+        font-size: 1.4rem;
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        max-width: 100%;
+    }
+
+    .Inicio h3 {
+        font-size: 1.4rem;
+    }
+
+    .typing-text {
+        font-size: 1rem;
+        height: 10px;
+    }
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 0.9rem;
+}
+
+ul img {
+    cursor: pointer;
+}
+
+a {
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: white;
+}
+
+.hipervinculo {
+    gap: 2rem;
+}
+
+.hipervinculo a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    position: relative;
+    padding: 0.4rem 0;
+    transition: color 0.3s ease;
+}
+
+.hipervinculo a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+.hipervinculo a:hover::after {
+    width: 100%;
+}
+
+.ala img {
+    width: 22px;
+}
+
+.ala2 img {
+    width: 18px;
+}
+
+/*header estático*/
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Asegura que el contenido NO quede debajo del header */
+.Inicio {
+    margin-top: 72px; /* ≈ altura del header (ajusta según tu diseño) */
+}
+
+/* Alternativa más robusta: usar CSS custom property */
+:root {
+    --header-height: 72px; /* ← define una vez y reusa */
+}
+
+header {
+    height: var(--header-height);
+}
+
+/* Aplica a todas las secciones con ID (incluyendo #inicio) */
+section[id],
+div[id]:not([id=""]) {
+    scroll-margin-top: var(--header-height);
+}
+
+/* ========================= */
+/*      MENU HAMBURGUESA     */
+/* ========================= */
+
+.menu-hamburguesa {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+.menu-hamburguesa img {
+    width: 26px;
+}
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 768px) {
+
+    header {
+        position: fixed;
+        flex-wrap: nowrap;
+    }
+
+    .menu-hamburguesa {
+        display: block;
+    }
+
+    /* OCULTAR menú desktop */
+    .nav-principal {
+        position: fixed;
+        top: var(--header-height);
+        left: 0;
+        width: 100%;
+        background: rgb(0, 5, 19);
+        display: none;
+        z-index: 999;
+    }
+
+    .nav-principal.activo {
+        display: block;
+    }
+
+    .nav-principal .hipervinculo {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 1.5rem 0;
+    }
+}
+
+/* ========================= */
+/*     REDES PLEGABLES       */
+/* ========================= */
+
+.acciones-header {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.btn-redes {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-redes img {
+    width: 24px;
+}
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 768px) {
+
+    .btn-redes {
+        display: block;
+    }
+
+    .redes {
+        position: fixed;
+        top: calc(var(--header-height) + 220px);
+        right: 1rem;
+        background: rgb(0, 5, 19);
+        border-radius: 12px;
+        padding: 0.8rem;
+        display: none;
+        z-index: 999;
+    }
+
+    .redes.activo {
+        display: block;
+    }
+
+    .redes ul {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+}
