@@ -7,6 +7,7 @@ export default function ModalProducto({ producto, onClose }) {
                 className="modal-contenido"
                 onClick={(e) => e.stopPropagation()}
             >
+                {/* BOTÓN CERRAR */}
                 <button
                     className="modal-cerrar"
                     onClick={onClose}
@@ -17,14 +18,15 @@ export default function ModalProducto({ producto, onClose }) {
                 {/* IMAGEN */}
                 <div className="modal-imagen-contenedor">
                     <img
-                        src={`/src/assets/${producto.imagen}`}
+                        src={producto.imagen}
                         alt={producto.nombre}
                     />
                 </div>
 
-                {/* INFO */}
+                {/* INFORMACIÓN */}
                 <div className="modal-info">
                     <h2>{producto.nombre}</h2>
+
                     <p className="modal-descripcion">
                         {producto.descripcion}
                     </p>
@@ -37,16 +39,18 @@ export default function ModalProducto({ producto, onClose }) {
                             <span>Año:</span> {producto.fecha}
                         </li>
                         <li>
-                            <span>Detalle:</span> {producto.estado}
+                            <span>Estado:</span> {producto.estado}
                         </li>
                     </ul>
+
                     <h5>Tecnologías usadas</h5>
+
                     <div className="modal-tecnologias">
                         {producto.tecnologias.map((tec, index) => (
                             <img
                                 key={index}
-                                src={`/src/assets/${tec}`}
-                                alt=""
+                                src={tec}
+                                alt="Tecnología"
                             />
                         ))}
                     </div>
@@ -55,7 +59,7 @@ export default function ModalProducto({ producto, onClose }) {
                         <a
                             href={producto.link}
                             target="_blank"
-                            rel="noreferrer"
+                            rel="noopener noreferrer"
                             className="modal-boton"
                         >
                             Ver Proyecto
