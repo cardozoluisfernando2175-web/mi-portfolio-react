@@ -28,7 +28,7 @@ const productos = [
         tecnologias: [reactIcon, htmlIcon, cssIcon, jsIcon, penpotIcon],
         imagen: cafeteria,
         fecha: "2024",
-        cliente: "Cafimochi central",
+        cliente: "Cafimochi",
         estado: "Finalizado",
         link: "https://cheto.com"
     },
