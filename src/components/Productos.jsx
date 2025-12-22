@@ -23,17 +23,6 @@ import phpIcon from "../assets/php.svg";
 const productos = [
     {
         id: 1,
-        nombre: "Página principal de una cafetería",
-        descripcion: "La página oficial de una cafetería muy reconocida en Cochabamba",
-        tecnologias: [reactIcon, htmlIcon, cssIcon, jsIcon, penpotIcon],
-        imagen: cafeteria,
-        fecha: "2024",
-        cliente: "Cafimochi",
-        estado: "Finalizado",
-        link: "https://cheto.com"
-    },
-    {
-        id: 2,
         nombre: "Landing Page de Catálogo de una repostería",
         descripcion: "Diseño UX/UI de una página de reserva y venta de postres",
         tecnologias: [penpotIcon, htmlIcon, cssIcon, infiniteIcon],
@@ -44,7 +33,7 @@ const productos = [
         link: "https://design.penpot.app/"
     },
     {
-        id: 3,
+        id: 2,
         nombre: "Landing Page de un restaurante tradicional",
         descripcion: "Diseño de una página web principal donde se muestra el menú",
         tecnologias: [penpotIcon, htmlIcon, cssIcon, infiniteIcon],
@@ -55,7 +44,7 @@ const productos = [
         link: "https://papillon_shop.com"
     },
     {
-        id: 4,
+        id: 3,
         nombre: "Landing Page empresarial",
         descripcion: "Desarrollo completo de una página con catálogo empresarial",
         tecnologias: [htmlIcon, cssIcon, jsIcon, phpIcon, responsiveIcon],
@@ -66,7 +55,7 @@ const productos = [
         link: "https://heggerhaus.xo.je/"
     },
     {
-        id: 5,
+        id: 4,
         nombre: "Sistema escolar virtual responsive",
         descripcion: "Diseño UX/UI del prototipo de un colegio virtual",
         tecnologias: [penpotIcon, infiniteIcon, responsiveIcon],
@@ -77,7 +66,7 @@ const productos = [
         link: "#"
     },
     {
-        id: 6,
+        id: 5,
         nombre: "Landing Page de verdulería",
         descripcion: "Diseño UX/UI del prototipo de una tienda de verduras",
         tecnologias: [penpotIcon, infiniteIcon, responsiveIcon],
@@ -86,6 +75,17 @@ const productos = [
         cliente: "UMSS",
         estado: "Diseñado",
         link: "#"
+    },
+    {
+        id: 6,
+        nombre: "Página principal de una cafetería",
+        descripcion: "La página oficial de una cafetería muy reconocida en Cochabamba",
+        tecnologias: [reactIcon, htmlIcon, cssIcon, jsIcon, penpotIcon],
+        imagen: cafeteria,
+        fecha: "2024",
+        cliente: "Cafimochi",
+        estado: "Finalizado",
+        link: "https://cheto.com"
     }
 ];
 
