@@ -127,6 +127,33 @@ h5 {
     }
 
     .modal-imagen-contenedor {
-        height: 200px;
+        height: 180px;
+    }
+
+    .modal-info h2 {
+        margin-bottom: 0;
+        font-size: 1.2rem;
+    }
+    
+    .modal-descripcion {
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .modal-contenido {
+        height: 60%;
+    }
+
+    .modal-detalles {
+        margin-bottom: 0.3rem;
+    }
+
+    .modal-tecnologias {
+        margin-bottom: 0.3rem;
+    }
+
+    .modal-boton {
+        margin-top: 0.3rem;
+        margin-bottom: 1rem;
     }
 }
