@@ -25,7 +25,7 @@ export default function Yo () {
                         desde el diseño UX/UI, hacer el frontend y tambien<br/>
                         manejar base de datos
                     </p>
-                    <h3>Mis skills:</h3>
+                    <h3>Mis habilidades:</h3>
                     <div className="skills">
                         <div className='img-container'>
                             <img src={html} alt="html"/>
