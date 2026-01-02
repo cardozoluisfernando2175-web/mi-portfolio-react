@@ -24,13 +24,13 @@ const productos = [
     {
         id: 1,
         nombre: "Landing Page de Catálogo de una repostería",
-        descripcion: "Diseño UX/UI de una página de reserva y venta de postres",
+        descripcion: "Desarrollo de una página de reserva y venta de postres",
         tecnologias: [penpotIcon, htmlIcon, cssIcon, infiniteIcon],
         imagen: catalogo,
         fecha: "2024",
         cliente: "Miskilinda",
         estado: "Subido",
-        link: "https://design.penpot.app/"
+        link: "https://miskilinda.netlify.app/"
     },
     {
         id: 2,
