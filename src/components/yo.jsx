@@ -1,6 +1,6 @@
 //yo.jsx
 import '../styles/yo.css'
-import perfil from "../assets/perfil.png"
+import perfil from "../assets/perfil1.png"
 import html from "../assets/html.svg"
 import react from "../assets/react.svg"
 import php from "../assets/php.svg"
