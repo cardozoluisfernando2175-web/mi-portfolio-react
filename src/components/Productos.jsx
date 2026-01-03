@@ -41,7 +41,7 @@ const productos = [
         fecha: "2024",
         cliente: "Papillon Shop",
         estado: "Finalizado",
-        link: "https://papillon_shop.com"
+        link: "https://papillon-shop.netlify.app/"
     },
     {
         id: 3,
