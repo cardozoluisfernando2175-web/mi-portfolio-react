@@ -63,7 +63,7 @@ const productos = [
         fecha: "2024",
         cliente: "UMSS",
         estado: "Diseñado",
-        link: "#"
+        link: "https://design.penpot.app/#/view?file-id=fffce8d7-4b40-8153-8007-38f84fdd3e19&page-id=fffce8d7-4b40-8153-8007-38f84fdd3e1a&section=interactions&index=0&zoom=fit&share-id=6123a605-f677-80e2-8007-5d15e9716de8"
     },
     {
         id: 5,
