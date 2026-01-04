@@ -85,7 +85,7 @@ const productos = [
         fecha: "2024",
         cliente: "Cafimochi",
         estado: "Finalizado",
-        link: "https://cheto.com"
+        link: "https://cafimochi.netlify.app/"
     }
 ];
 
