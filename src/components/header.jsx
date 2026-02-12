@@ -56,7 +56,7 @@ export default function Header() {
         <header ref={headerRef}>
             <div className="arriba">
 
-                <h2>Wis_2175</h2>
+                <h2>FerDev_<span>&#9733;</span></h2>
 
                 {/* MENÚ PRINCIPAL */}
                 <nav
