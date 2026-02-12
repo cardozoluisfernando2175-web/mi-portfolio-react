@@ -28,7 +28,7 @@ const productos = [
         tecnologias: [penpotIcon, htmlIcon, cssIcon, infiniteIcon],
         imagen: catalogo,
         fecha: "2024",
-        cliente: "Miskilinda",
+        cliente: "Miskilinda oficial",
         estado: "Subido",
         link: "https://miskilinda.netlify.app/"
     },
